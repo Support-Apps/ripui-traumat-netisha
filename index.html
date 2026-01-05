@@ -1,0 +1,1914 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>שחרור ואהבה עצמית</title>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Gveret Levin';
+            src: local('Gveret Levin AlefAlefAlef');
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gveret Levin', 'Heebo', sans-serif;
+            background: linear-gradient(135deg, #FFF0F5 0%, #F0FFF0 50%, #FFFAF0 100%);
+            min-height: 100vh;
+            color: #4a4a4a;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 20px;
+            background: linear-gradient(135deg, #FFB6C1 0%, #98D8C8 100%);
+            border-radius: 0 0 30px 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(255, 182, 193, 0.3);
+        }
+
+        header h1 {
+            color: #fff;
+            font-size: 2.2em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #fff;
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .nav-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 25px;
+            padding: 0 10px;
+        }
+
+        .nav-tab {
+            padding: 12px 18px;
+            background: #fff;
+            border: 2px solid #FFB6C1;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: inherit;
+            font-size: 0.95em;
+            color: #666;
+        }
+
+        .nav-tab:hover {
+            background: #FFF0F5;
+            transform: translateY(-2px);
+        }
+
+        .nav-tab.active {
+            background: linear-gradient(135deg, #FFB6C1 0%, #98D8C8 100%);
+            color: #fff;
+            border-color: transparent;
+            box-shadow: 0 4px 12px rgba(255, 182, 193, 0.4);
+        }
+
+        .section {
+            display: none;
+            background: #fff;
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            animation: fadeIn 0.4s ease;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section-title {
+            color: #D4A574;
+            font-size: 1.6em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #FFB6C1;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card {
+            background: linear-gradient(135deg, #FFF5F8 0%, #F5FFFA 100%);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-right: 4px solid #D4A574;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateX(-5px);
+        }
+
+        .card h3 {
+            color: #98D8C8;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .card p, .card li {
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .card ul {
+            padding-right: 20px;
+            margin-top: 10px;
+        }
+
+        .card li {
+            margin-bottom: 8px;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #FFB6C1 0%, #FF69B4 100%);
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(255, 182, 193, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255, 182, 193, 0.5);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, #98D8C8 0%, #6BBF9F 100%);
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(152, 216, 200, 0.4);
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(152, 216, 200, 0.5);
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, #D4A574 0%, #C49A6C 100%);
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(212, 165, 116, 0.4);
+        }
+
+        .affirmation-box {
+            background: linear-gradient(135deg, #FFE4EC 0%, #E8F8F5 100%);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            margin: 20px 0;
+            border: 2px solid #D4A574;
+        }
+
+        .affirmation-text {
+            font-size: 1.5em;
+            color: #C49A6C;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .exercise-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #FFF5F8;
+            border-radius: 15px;
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #D4A574 0%, #C49A6C 100%);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 15px;
+            background: #FFFAF0;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .checklist-item:hover {
+            border-color: #FFB6C1;
+        }
+
+        .checklist-item.checked {
+            background: linear-gradient(135deg, #E8F8F5 0%, #F0FFF0 100%);
+            border-color: #98D8C8;
+        }
+
+        .checklist-item input[type="checkbox"] {
+            width: 22px;
+            height: 22px;
+            accent-color: #98D8C8;
+            cursor: pointer;
+        }
+
+        .progress-container {
+            background: #f0f0f0;
+            border-radius: 15px;
+            height: 25px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #FFB6C1 0%, #98D8C8 50%, #D4A574 100%);
+            border-radius: 15px;
+            transition: width 0.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .journal-textarea {
+            width: 100%;
+            min-height: 150px;
+            padding: 15px;
+            border: 2px solid #FFB6C1;
+            border-radius: 15px;
+            font-family: inherit;
+            font-size: 1em;
+            resize: vertical;
+            margin-bottom: 15px;
+            transition: border-color 0.3s ease;
+        }
+
+        .journal-textarea:focus {
+            outline: none;
+            border-color: #98D8C8;
+        }
+
+        .relationship-scale {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .scale-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .scale-item label {
+            flex: 1;
+            font-size: 0.95em;
+        }
+
+        .scale-item input[type="range"] {
+            width: 150px;
+            accent-color: #FFB6C1;
+        }
+
+        .scale-value {
+            width: 40px;
+            text-align: center;
+            font-weight: bold;
+            color: #D4A574;
+        }
+
+        .result-box {
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .result-healthy {
+            background: linear-gradient(135deg, #E8F8F5 0%, #D4EFDF 100%);
+            border: 2px solid #98D8C8;
+        }
+
+        .result-warning {
+            background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+            border: 2px solid #FFB74D;
+        }
+
+        .result-unhealthy {
+            background: linear-gradient(135deg, #FFEBEE 0%, #FFCDD2 100%);
+            border: 2px solid #EF5350;
+        }
+
+        .daily-tracker {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 8px;
+            margin: 20px 0;
+        }
+
+        .day-cell {
+            aspect-ratio: 1;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.85em;
+            background: #f5f5f5;
+            border: 2px solid transparent;
+        }
+
+        .day-cell:hover {
+            transform: scale(1.05);
+        }
+
+        .day-cell.completed {
+            background: linear-gradient(135deg, #98D8C8 0%, #6BBF9F 100%);
+            color: #fff;
+        }
+
+        .day-cell.today {
+            border-color: #D4A574;
+            box-shadow: 0 0 10px rgba(212, 165, 116, 0.5);
+        }
+
+        .emoji-rating {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .emoji-btn {
+            font-size: 2.5em;
+            background: none;
+            border: 3px solid transparent;
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .emoji-btn:hover {
+            transform: scale(1.2);
+        }
+
+        .emoji-btn.selected {
+            border-color: #D4A574;
+            background: #FFFAF0;
+        }
+
+        .quote-card {
+            background: linear-gradient(135deg, #FFF0F5 0%, #FFFAF0 100%);
+            border-radius: 20px;
+            padding: 25px;
+            text-align: center;
+            margin: 20px 0;
+            border: 2px solid #D4A574;
+            position: relative;
+        }
+
+        .quote-card::before {
+            content: '"';
+            font-size: 4em;
+            color: #FFB6C1;
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            opacity: 0.5;
+        }
+
+        .quote-text {
+            font-size: 1.2em;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .quote-author {
+            color: #D4A574;
+            font-weight: bold;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #FFF5F8 0%, #F5FFFA 100%);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #D4A574;
+        }
+
+        .stat-label {
+            color: #888;
+            font-size: 0.9em;
+        }
+
+        .breathing-circle {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #FFB6C1 0%, #98D8C8 100%);
+            margin: 30px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.3em;
+            animation: none;
+        }
+
+        .breathing-circle.breathing {
+            animation: breathe 8s infinite ease-in-out;
+        }
+
+        @keyframes breathe {
+            0%, 100% { transform: scale(1); }
+            25% { transform: scale(1.2); }
+            50% { transform: scale(1.2); }
+            75% { transform: scale(1); }
+        }
+
+        .letter-section {
+            margin-top: 20px;
+        }
+
+        .saved-entries {
+            max-height: 300px;
+            overflow-y: auto;
+            margin-top: 15px;
+        }
+
+        .entry-item {
+            background: #FFF5F8;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-right: 3px solid #98D8C8;
+        }
+
+        .entry-date {
+            font-size: 0.85em;
+            color: #888;
+            margin-bottom: 5px;
+        }
+
+        .entry-content {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .inner-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .inner-tab {
+            padding: 10px 20px;
+            background: #f5f5f5;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .inner-tab.active {
+            background: #FFB6C1;
+            color: #fff;
+        }
+
+        .warning-signs {
+            display: grid;
+            gap: 10px;
+        }
+
+        .warning-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 15px;
+            background: #FFF5F8;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .warning-item.detected {
+            background: #FFEBEE;
+            border-right: 3px solid #EF5350;
+        }
+
+        .warning-icon {
+            font-size: 1.3em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #888;
+            font-size: 0.9em;
+        }
+
+        .btn-reset {
+            background: linear-gradient(135deg, #ccc 0%, #999 100%);
+            color: #fff;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.6em;
+            }
+            .nav-tab {
+                padding: 10px 14px;
+                font-size: 0.85em;
+            }
+            .section {
+                padding: 18px;
+            }
+            .affirmation-text {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>💕 שחרור ואהבה עצמית 💕</h1>
+        <p>המסע שלך לריפוי, חופש ואהבה עצמית אמיתית</p>
+    </header>
+
+    <div class="container">
+        <nav class="nav-tabs">
+            <button class="nav-tab active" onclick="showSection('home')">🏠 בית</button>
+            <button class="nav-tab" onclick="showSection('anxiety')">💗 חרדת נטישה</button>
+            <button class="nav-tab" onclick="showSection('esteem')">⭐ הערכה עצמית</button>
+            <button class="nav-tab" onclick="showSection('relationships')">🔗 קשרים</button>
+            <button class="nav-tab" onclick="showSection('tools')">🛠️ כלים</button>
+            <button class="nav-tab" onclick="showSection('progress')">📊 התקדמות</button>
+        </nav>
+
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <h2 class="section-title">🌸 ברוכה הבאה למסע שלך</h2>
+            
+            <div class="quote-card">
+                <p class="quote-text" id="dailyQuote">את ראויה לאהבה - קודם כל מעצמך</p>
+                <p class="quote-author">- תזכורת יומית</p>
+            </div>
+
+            <div class="card">
+                <h3>✨ האפליקציה הזו נוצרה עבורך</h3>
+                <p>כאן תמצאי כלים להתמודדות עם חרדת נטישה, חיזוק ההערכה העצמית, וליווי בתהליך שחרור מקשרים שלא משרתים אותך. את לא לבד במסע הזה.</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" id="daysActive">0</div>
+                    <div class="stat-label">ימים פעילים</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="affirmationsRead">0</div>
+                    <div class="stat-label">אישורים שנקראו</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="exercisesCompleted">0</div>
+                    <div class="stat-label">תרגילים שהושלמו</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="journalEntries">0</div>
+                    <div class="stat-label">רשומות יומן</div>
+                </div>
+            </div>
+
+            <div class="affirmation-box">
+                <h3 style="color: #D4A574; margin-bottom: 15px;">🌟 האישור היומי שלך</h3>
+                <p class="affirmation-text" id="homeAffirmation">אני שלמה גם לבד. אני בוחרת קשרים שמעצימים אותי.</p>
+                <button class="btn btn-primary" onclick="newAffirmation()">💫 אישור חדש</button>
+            </div>
+
+            <div class="card">
+                <h3>📋 המשימות שלך להיום</h3>
+                <div id="todayTasks">
+                    <div class="checklist-item" onclick="toggleTask(this)">
+                        <input type="checkbox">
+                        <span>לקרוא אישור אחד ולומר אותו בקול</span>
+                    </div>
+                    <div class="checklist-item" onclick="toggleTask(this)">
+                        <input type="checkbox">
+                        <span>לעשות תרגיל נשימה אחד</span>
+                    </div>
+                    <div class="checklist-item" onclick="toggleTask(this)">
+                        <input type="checkbox">
+                        <span>לכתוב משהו אחד טוב על עצמי</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Anxiety Section -->
+        <section id="anxiety" class="section">
+            <h2 class="section-title">💗 להבין ולרפא חרדת נטישה</h2>
+
+            <div class="inner-tabs">
+                <button class="inner-tab active" onclick="showInnerTab('anxiety', 'understand')">הבנה</button>
+                <button class="inner-tab" onclick="showInnerTab('anxiety', 'triggers')">טריגרים</button>
+                <button class="inner-tab" onclick="showInnerTab('anxiety', 'exercises')">תרגילים</button>
+                <button class="inner-tab" onclick="showInnerTab('anxiety', 'soothe')">הרגעה</button>
+            </div>
+
+            <div id="anxiety-understand" class="tab-content active">
+                <div class="card">
+                    <h3>🧠 מה זו חרדת נטישה?</h3>
+                    <p>חרדת נטישה היא פחד עמוק ומתמשך מכך שאנשים קרובים יעזבו אותנו. היא לרוב נובעת מחוויות מוקדמות ויכולה להשפיע על הקשרים שלנו בבגרות.</p>
+                    <ul>
+                        <li>פחד תמידי שהאדם האהוב יעזוב</li>
+                        <li>קושי לסמוך על אחרים</li>
+                        <li>נטייה להיצמד או להתרחק מאוד</li>
+                        <li>רגישות יתר לסימני דחייה</li>
+                        <li>קושי להיות לבד</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>💚 זה לא האשמה שלך</h3>
+                    <p>חרדת נטישה מתפתחת בדרך כלל בילדות כתגובה לחוויות מסוימות. היא לא מגדירה אותך ואפשר לרפא אותה. הצעד הראשון הוא להכיר בה ולהבין מאיפה היא באה.</p>
+                </div>
+
+                <div class="card">
+                    <h3>🌱 מקורות נפוצים</h3>
+                    <ul>
+                        <li>אובדן או פרידה מהורה בילדות</li>
+                        <li>הורות לא עקבית או זמינה רגשית</li>
+                        <li>טראומת נטישה (גירושין, מחלה, מוות)</li>
+                        <li>חוויות דחייה חוזרות</li>
+                        <li>קשרים לא יציבים בבגרות</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="anxiety-triggers" class="tab-content">
+                <div class="card">
+                    <h3>⚡ זהי את הטריגרים שלך</h3>
+                    <p>סמני מה מעורר אצלך חרדת נטישה:</p>
+                    <div class="warning-signs" id="triggersList">
+                        <div class="warning-item" onclick="toggleWarning(this)">
+                            <span class="warning-icon">📱</span>
+                            <span>תגובה מאוחרת להודעות</span>
+                        </div>
+                        <div class="warning-item" onclick="toggleWarning(this)">
+                            <span class="warning-icon">🚪</span>
+                            <span>כשמישהו צריך מרחב</span>
+                        </div>
+                        <div class="warning-item" onclick="toggleWarning(this)">
+                            <span class="warning-icon">😶</span>
+                            <span>שתיקה או חוסר תגובה</span>
+                        </div>
+                        <div class="warning-item" onclick="toggleWarning(this)">
+                            <span class="warning-icon">📅</span>
+                            <span>שינויים בתוכניות</span>
+                        </div>
+                        <div class="warning-item" onclick="toggleWarning(this)">
+                            <span class="warning-icon">👥</span>
+                            <span>כשהזולת מבלה עם אחרים</span>
+                        </div>
+                        <div class="warning-item" onclick="toggleWarning(this)">
+                            <span class="warning-icon">💭</span>
+                            <span>ביקורת או חוסר הסכמה</span>
+                        </div>
+                        <div class="warning-item" onclick="toggleWarning(this)">
+                            <span class="warning-icon">🌙</span>
+                            <span>להיות לבד בלילה</span>
+                        </div>
+                        <div class="warning-item" onclick="toggleWarning(this)">
+                            <span class="warning-icon">🔄</span>
+                            <span>סיום שיחה או פגישה</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>📝 הטריגר האישי שלי</h3>
+                    <textarea class="journal-textarea" id="triggerJournal" placeholder="כתבי כאן מצבים ספציפיים שמעוררים אצלך חרדה..."></textarea>
+                    <button class="btn btn-secondary" onclick="saveTrigger()">💾 שמור</button>
+                </div>
+            </div>
+
+            <div id="anxiety-exercises" class="tab-content">
+                <div class="card">
+                    <h3>🧘‍♀️ תרגיל: הארקה בחרדה</h3>
+                    <p>כשאת מרגישה חרדת נטישה עולה, עשי את התרגיל הזה:</p>
+                    <div class="exercise-step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <strong>עצרי והכירי</strong>
+                            <p>"אני מרגישה חרדת נטישה עכשיו. זו תחושה, לא מציאות."</p>
+                        </div>
+                    </div>
+                    <div class="exercise-step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <strong>5-4-3-2-1</strong>
+                            <p>ציני 5 דברים שאת רואה, 4 שאת שומעת, 3 שאת מרגישה, 2 שאת מריחה, 1 שאת טועמת.</p>
+                        </div>
+                    </div>
+                    <div class="exercise-step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <strong>נשמי</strong>
+                            <p>קחי 5 נשימות עמוקות. שאפי ל-4, החזיקי ל-4, נשפי ל-6.</p>
+                        </div>
+                    </div>
+                    <div class="exercise-step">
+                        <div class="step-number">4</div>
+                        <div>
+                            <strong>בדקי עובדות</strong>
+                            <p>"מה העובדות? האם יש הוכחה אמיתית שמישהו עוזב אותי?"</p>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" onclick="completeExercise('grounding')">✅ סיימתי את התרגיל</button>
+                </div>
+
+                <div class="card">
+                    <h3>💌 מכתב לילדה הפנימית</h3>
+                    <p>כתבי מכתב לעצמך הקטנה, לילדה שחוותה את הנטישה הראשונה:</p>
+                    <textarea class="journal-textarea" id="innerChildLetter" placeholder="ילדה יקרה שלי..."></textarea>
+                    <button class="btn btn-secondary" onclick="saveInnerChildLetter()">💾 שמרי את המכתב</button>
+                </div>
+
+                <div class="card">
+                    <h3>🔄 אתגור מחשבות</h3>
+                    <p><strong>המחשבה שלי:</strong></p>
+                    <textarea class="journal-textarea" id="anxiousThought" placeholder="לדוגמה: 'הוא לא ענה כבר שעה, בטח הוא עוזב אותי'" style="min-height: 80px;"></textarea>
+                    <p><strong>עובדות תומכות:</strong></p>
+                    <textarea class="journal-textarea" id="supportingFacts" placeholder="מה העובדות האמיתיות?" style="min-height: 80px;"></textarea>
+                    <p><strong>מחשבה מאוזנת יותר:</strong></p>
+                    <textarea class="journal-textarea" id="balancedThought" placeholder="'אולי הוא פשוט עסוק, זה לא אומר שהוא עוזב'" style="min-height: 80px;"></textarea>
+                    <button class="btn btn-gold" onclick="saveThoughtChallenge()">💾 שמרי אתגור</button>
+                </div>
+            </div>
+
+            <div id="anxiety-soothe" class="tab-content">
+                <div class="card">
+                    <h3>🫂 תרגיל נשימה מרגיע</h3>
+                    <p>לחצי על העיגול והתחילי לנשום יחד איתו:</p>
+                    <div class="breathing-circle" id="breathingCircle" onclick="startBreathing()">
+                        לחצי להתחלה
+                    </div>
+                    <button class="btn btn-secondary" onclick="stopBreathing()">⏹️ עצרי</button>
+                </div>
+
+                <div class="card">
+                    <h3>💝 אישורים לרגעי חרדה</h3>
+                    <div class="affirmation-box" style="border: none; background: transparent; padding: 0;">
+                        <p class="affirmation-text" id="anxietyAffirmation">אני בטוחה. אני אהובה. אני שלמה גם לבד.</p>
+                        <button class="btn btn-primary" onclick="newAnxietyAffirmation()">💫 אישור חדש</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>🤲 חיבוק עצמי</h3>
+                    <p>כשהחרדה עולה, חבקי את עצמך פיזית:</p>
+                    <div class="exercise-step">
+                        <div class="step-number">1</div>
+                        <div>הצליבי את הידיים על החזה</div>
+                    </div>
+                    <div class="exercise-step">
+                        <div class="step-number">2</div>
+                        <div>טפחי לעצמך לסירוגין על הכתפיים</div>
+                    </div>
+                    <div class="exercise-step">
+                        <div class="step-number">3</div>
+                        <div>אמרי: "אני כאן בשבילך. את בטוחה. את אהובה."</div>
+                    </div>
+                    <button class="btn btn-primary" onclick="completeExercise('selfhug')">✅ עשיתי</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Self Esteem Section -->
+        <section id="esteem" class="section">
+            <h2 class="section-title">⭐ בנייה מחדש של הערכה עצמית</h2>
+
+            <div class="inner-tabs">
+                <button class="inner-tab active" onclick="showInnerTab('esteem', 'affirmations')">אישורים</button>
+                <button class="inner-tab" onclick="showInnerTab('esteem', 'strengths')">החוזקות שלי</button>
+                <button class="inner-tab" onclick="showInnerTab('esteem', 'journal')">יומן הצלחות</button>
+                <button class="inner-tab" onclick="showInnerTab('esteem', 'mirror')">עבודת מראה</button>
+            </div>
+
+            <div id="esteem-affirmations" class="tab-content active">
+                <div class="affirmation-box">
+                    <h3 style="color: #D4A574; margin-bottom: 15px;">🌟 אישורים להערכה עצמית</h3>
+                    <p class="affirmation-text" id="esteemAffirmation">אני ראויה לאהבה ולכבוד - בדיוק כמו שאני.</p>
+                    <div class="action-buttons" style="justify-content: center;">
+                        <button class="btn btn-primary" onclick="newEsteemAffirmation()">💫 אישור חדש</button>
+                        <button class="btn btn-gold" onclick="speakAffirmation()">🔊 הקראה</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>📜 רשימת האישורים שלי</h3>
+                    <p>אישורים שאת יכולה לומר לעצמך כל יום:</p>
+                    <ul>
+                        <li>אני מספיקה בדיוק כמו שאני</li>
+                        <li>הערך שלי לא תלוי בדעת אחרים</li>
+                        <li>אני ראויה לקשרים בריאים ותומכים</li>
+                        <li>אני יכולה לסמוך על עצמי</li>
+                        <li>הצרכים שלי חשובים ותקפים</li>
+                        <li>אני בוחרת לאהוב את עצמי</li>
+                        <li>אני חזקה וגמישה</li>
+                        <li>אני לומדת וצומחת כל יום</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>✏️ כתבי אישור משלך</h3>
+                    <textarea class="journal-textarea" id="customAffirmation" placeholder="כתבי אישור אישי שמדבר אלייך..." style="min-height: 80px;"></textarea>
+                    <button class="btn btn-secondary" onclick="saveCustomAffirmation()">💾 הוסיפי לרשימה שלי</button>
+                    <div id="myAffirmations" class="saved-entries" style="margin-top: 15px;"></div>
+                </div>
+            </div>
+
+            <div id="esteem-strengths" class="tab-content">
+                <div class="card">
+                    <h3>💪 החוזקות שלי</h3>
+                    <p>סמני את החוזקות שאת מזהה בעצמך:</p>
+                    <div id="strengthsList">
+                        <div class="checklist-item" onclick="toggleStrength(this)">
+                            <input type="checkbox">
+                            <span>אמפתיה והקשבה</span>
+                        </div>
+                        <div class="checklist-item" onclick="toggleStrength(this)">
+                            <input type="checkbox">
+                            <span>יצירתיות</span>
+                        </div>
+                        <div class="checklist-item" onclick="toggleStrength(this)">
+                            <input type="checkbox">
+                            <span>התמדה</span>
+                        </div>
+                        <div class="checklist-item" onclick="toggleStrength(this)">
+                            <input type="checkbox">
+                            <span>חוש הומור</span>
+                        </div>
+                        <div class="checklist-item" onclick="toggleStrength(this)">
+                            <input type="checkbox">
+                            <span>אינטליגנציה</span>
+                        </div>
+                        <div class="checklist-item" onclick="toggleStrength(this)">
+                            <input type="checkbox">
+                            <span>נאמנות</span>
+                        </div>
+                        <div class="checklist-item" onclick="toggleStrength(this)">
+                            <input type="checkbox">
+                            <span>אומץ</span>
+                        </div>
+                        <div class="checklist-item" onclick="toggleStrength(this)">
+                            <input type="checkbox">
+                            <span>רגישות</span>
+                        </div>
+                        <div class="checklist-item" onclick="toggleStrength(this)">
+                            <input type="checkbox">
+                            <span>עצמאות</span>
+                        </div>
+                        <div class="checklist-item" onclick="toggleStrength(this)">
+                            <input type="checkbox">
+                            <span>אופטימיות</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>✨ הוסיפי חוזקה</h3>
+                    <textarea class="journal-textarea" id="customStrength" placeholder="חוזקה נוספת שאת מזהה בעצמך..." style="min-height: 80px;"></textarea>
+                    <button class="btn btn-secondary" onclick="addStrength()">➕ הוסיפי</button>
+                </div>
+            </div>
+
+            <div id="esteem-journal" class="tab-content">
+                <div class="card">
+                    <h3>📔 יומן הצלחות והישגים</h3>
+                    <p>כתבי משהו שהצלחת בו היום, גם אם נראה קטן:</p>
+                    <textarea class="journal-textarea" id="successEntry" placeholder="היום הצלחתי..."></textarea>
+                    <button class="btn btn-primary" onclick="saveSuccess()">💾 שמרי הצלחה</button>
+                </div>
+
+                <div class="card">
+                    <h3>🏆 ההצלחות שלי</h3>
+                    <div id="successList" class="saved-entries"></div>
+                </div>
+            </div>
+
+            <div id="esteem-mirror" class="tab-content">
+                <div class="card">
+                    <h3>🪞 עבודת מראה</h3>
+                    <p>זהו תרגיל יומי לחיזוק אהבה עצמית:</p>
+                    <div class="exercise-step">
+                        <div class="step-number">1</div>
+                        <div>עמדי מול המראה והסתכלי לעצמך בעיניים</div>
+                    </div>
+                    <div class="exercise-step">
+                        <div class="step-number">2</div>
+                        <div>אמרי בקול: "[שמך], אני אוהבת אותך"</div>
+                    </div>
+                    <div class="exercise-step">
+                        <div class="step-number">3</div>
+                        <div>אמרי: "את ראויה לאהבה ולכבוד"</div>
+                    </div>
+                    <div class="exercise-step">
+                        <div class="step-number">4</div>
+                        <div>אמרי דבר אחד שאת מעריכה בעצמך</div>
+                    </div>
+                    <button class="btn btn-gold" onclick="completeMirrorWork()">✅ סיימתי עבודת מראה</button>
+                </div>
+
+                <div class="card">
+                    <h3>📝 מה אמרתי לעצמי היום</h3>
+                    <textarea class="journal-textarea" id="mirrorJournal" placeholder="כתבי מה אמרת לעצמך במראה..."></textarea>
+                    <button class="btn btn-secondary" onclick="saveMirrorEntry()">💾 שמרי</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Relationships Section -->
+        <section id="relationships" class="section">
+            <h2 class="section-title">🔗 קשרים בריאים ושחרור</h2>
+
+            <div class="inner-tabs">
+                <button class="inner-tab active" onclick="showInnerTab('relationships', 'assess')">הערכת קשר</button>
+                <button class="inner-tab" onclick="showInnerTab('relationships', 'signs')">דגלים אדומים</button>
+                <button class="inner-tab" onclick="showInnerTab('relationships', 'ending')">לסיים בכבוד</button>
+                <button class="inner-tab" onclick="showInnerTab('relationships', 'healing')">ריפוי אחרי</button>
+            </div>
+
+            <div id="relationships-assess" class="tab-content active">
+                <div class="card">
+                    <h3>📊 הערכת בריאות הקשר</h3>
+                    <p>דרגי כל היבט מ-1 (מאוד נמוך) עד 10 (מצוין):</p>
+                    <div class="relationship-scale">
+                        <div class="scale-item">
+                            <label>כבוד הדדי</label>
+                            <input type="range" min="1" max="10" value="5" oninput="updateScale(this)">
+                            <span class="scale-value">5</span>
+                        </div>
+                        <div class="scale-item">
+                            <label>תקשורת פתוחה</label>
+                            <input type="range" min="1" max="10" value="5" oninput="updateScale(this)">
+                            <span class="scale-value">5</span>
+                        </div>
+                        <div class="scale-item">
+                            <label>אמון</label>
+                            <input type="range" min="1" max="10" value="5" oninput="updateScale(this)">
+                            <span class="scale-value">5</span>
+                        </div>
+                        <div class="scale-item">
+                            <label>תמיכה רגשית</label>
+                            <input type="range" min="1" max="10" value="5" oninput="updateScale(this)">
+                            <span class="scale-value">5</span>
+                        </div>
+                        <div class="scale-item">
+                            <label>מרחב אישי</label>
+                            <input type="range" min="1" max="10" value="5" oninput="updateScale(this)">
+                            <span class="scale-value">5</span>
+                        </div>
+                        <div class="scale-item">
+                            <label>שוויון בנתינה</label>
+                            <input type="range" min="1" max="10" value="5" oninput="updateScale(this)">
+                            <span class="scale-value">5</span>
+                        </div>
+                        <div class="scale-item">
+                            <label>התאמת ערכים</label>
+                            <input type="range" min="1" max="10" value="5" oninput="updateScale(this)">
+                            <span class="scale-value">5</span>
+                        </div>
+                        <div class="scale-item">
+                            <label>הרגשה טובה עם עצמי</label>
+                            <input type="range" min="1" max="10" value="5" oninput="updateScale(this)">
+                            <span class="scale-value">5</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" onclick="assessRelationship()">📋 קבלי הערכה</button>
+                    <div id="assessmentResult"></div>
+                </div>
+            </div>
+
+            <div id="relationships-signs" class="tab-content">
+                <div class="card">
+                    <h3>🚩 דגלים אדומים בקשרים</h3>
+                    <p>סמני אם את מזהה משהו מהסימנים הבאים בקשר שלך:</p>
+                    <div class="warning-signs" id="redFlagsList">
+                        <div class="warning-item" onclick="toggleWarning(this)">
+                            <span class="warning-icon">🎭</span>
+                            <span>שליטה והתנהגות שתלטנית</span>
+                        </div>
+                        <div class="warning-item" onclick="toggleWarning(this)">
+                            <span class="warning-icon">💔</span>
+                            <span>ביקורת מתמדת והשפלות</span>
+                        </div>
+                        <div class="warning-item" onclick="toggleWarning(this)">
+                            <span class="warning-icon">🤐</span>
+                            <span>התעלמות או שתיקה עונשית</span>
+                        </div>
+                        <div class="warning-item" onclick="toggleWarning(this)">
+                            <span class="warning-icon">🔄</span>
+                            <span>מעגל של התנצלויות וחזרה על אותו דפוס</span>
+                        </div>
+                        <div class="warning-item" onclick="toggleWarning(this)">
+                            <span class="warning-icon">🚫</span>
+                            <span>בידוד ממשפחה וחברים</span>
+                        </div>
+                        <div class="warning-item" onclick="toggleWarning(this)">
+                            <span class="warning-icon">😰</span>
+                            <span>הרגשת פחד או הליכה על ביצים</span>
+                        </div>
+                        <div class="warning-item" onclick="toggleWarning(this)">
+                            <span class="warning-icon">🎪</span>
+                            <span>גאסלייטינג - גורם לך לפקפק בעצמך</span>
+                        </div>
+                        <div class="warning-item" onclick="toggleWarning(this)">
+                            <span class="warning-icon">⚖️</span>
+                            <span>חוסר איזון - את נותנת הרבה יותר</span>
+                        </div>
+                        <div class="warning-item" onclick="toggleWarning(this)">
+                            <span class="warning-icon">🙈</span>
+                            <span>חוסר אחריות על טעויות</span>
+                        </div>
+                        <div class="warning-item" onclick="toggleWarning(this)">
+                            <span class="warning-icon">💢</span>
+                            <span>כעס לא מבוקר או התפרצויות</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-gold" onclick="analyzeRedFlags()">🔍 ניתוח</button>
+                    <div id="redFlagsResult"></div>
+                </div>
+
+                <div class="card">
+                    <h3>💚 סימנים של קשר בריא</h3>
+                    <ul>
+                        <li>את מרגישה בטוחה להיות עצמך</li>
+                        <li>יש כבוד הדדי גם במחלוקות</li>
+                        <li>תקשורת פתוחה וכנה</li>
+                        <li>תמיכה בחלומות ובמטרות שלך</li>
+                        <li>מרחב אישי ועצמאות</li>
+                        <li>פתרון קונפליקטים בריא</li>
+                        <li>את מרגישה טוב יותר עם עצמך</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="relationships-ending" class="tab-content">
+                <div class="card">
+                    <h3>🚪 לסיים קשר בכבוד ובבטחה</h3>
+                    <p>צעדים לסיום קשר לא בריא:</p>
+                    <div class="exercise-step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <strong>בני מערכת תמיכה</strong>
+                            <p>ודאי שיש לך אנשים קרובים שתוכלי להישען עליהם.</p>
+                        </div>
+                    </div>
+                    <div class="exercise-step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <strong>תכנני מראש</strong>
+                            <p>חשבי על לוגיסטיקה, מגורים, כספים אם רלוונטי.</p>
+                        </div>
+                    </div>
+                    <div class="exercise-step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <strong>היי ברורה וישירה</strong>
+                            <p>"החלטתי לסיים את הקשר" - לא צריך להצדיק או לנהל משא ומתן.</p>
+                        </div>
+                    </div>
+                    <div class="exercise-step">
+                        <div class="step-number">4</div>
+                        <div>
+                            <strong>שמרי על גבולות</strong>
+                            <p>הגדירי מה מותר ומה לא בתקשורת אחרי הפרידה.</p>
+                        </div>
+                    </div>
+                    <div class="exercise-step">
+                        <div class="step-number">5</div>
+                        <div>
+                            <strong>אל תחזרי לדפוסים ישנים</strong>
+                            <p>זכרי למה עזבת כשיש רגעים קשים.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>📝 מכתב לעצמי - למה אני עוזבת</h3>
+                    <p>כתבי לעצמך את הסיבות שבגללן את בוחרת לעזוב. תוכלי לחזור למכתב הזה ברגעים קשים:</p>
+                    <textarea class="journal-textarea" id="whyLeavingLetter" placeholder="אני בוחרת לעזוב כי..."></textarea>
+                    <button class="btn btn-primary" onclick="saveWhyLeaving()">💾 שמרי</button>
+                </div>
+
+                <div class="card">
+                    <h3>🛡️ תסריטים לשימוש</h3>
+                    <div style="background: #FFF5F8; padding: 15px; border-radius: 10px; margin-bottom: 10px;">
+                        <strong>"אני מעריכה את הזמן שלנו, אבל הבנתי שהקשר הזה לא משרת אותי."</strong>
+                    </div>
+                    <div style="background: #FFF5F8; padding: 15px; border-radius: 10px; margin-bottom: 10px;">
+                        <strong>"ההחלטה שלי סופית ואני מבקשת שתכבד אותה."</strong>
+                    </div>
+                    <div style="background: #FFF5F8; padding: 15px; border-radius: 10px; margin-bottom: 10px;">
+                        <strong>"אני לא מוכנה להמשיך בשיחה הזו. שלום."</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div id="relationships-healing" class="tab-content">
+                <div class="card">
+                    <h3>💗 ריפוי אחרי פרידה</h3>
+                    <p>התהליך לוקח זמן. היי סבלנית עם עצמך.</p>
+                    <div class="checklist-item" onclick="toggleTask(this)">
+                        <input type="checkbox">
+                        <span>הרשיתי לעצמי לעבור את כל הרגשות</span>
+                    </div>
+                    <div class="checklist-item" onclick="toggleTask(this)">
+                        <input type="checkbox">
+                        <span>יצרתי מרחק (פיזי ודיגיטלי)</span>
+                    </div>
+                    <div class="checklist-item" onclick="toggleTask(this)">
+                        <input type="checkbox">
+                        <span>חזרתי לשגרה ותחביבים</span>
+                    </div>
+                    <div class="checklist-item" onclick="toggleTask(this)">
+                        <input type="checkbox">
+                        <span>פניתי לתמיכה מקצועית</span>
+                    </div>
+                    <div class="checklist-item" onclick="toggleTask(this)">
+                        <input type="checkbox">
+                        <span>עבדתי על אהבה עצמית</span>
+                    </div>
+                    <div class="checklist-item" onclick="toggleTask(this)">
+                        <input type="checkbox">
+                        <span>זיהיתי דפוסים שאני רוצה לשנות</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>📝 יומן ריפוי</h3>
+                    <textarea class="journal-textarea" id="healingJournal" placeholder="כתבי על תהליך הריפוי שלך... מה קשה? מה מתקדם?"></textarea>
+                    <button class="btn btn-secondary" onclick="saveHealingEntry()">💾 שמרי</button>
+                    <div id="healingEntries" class="saved-entries"></div>
+                </div>
+
+                <div class="affirmation-box">
+                    <h3 style="color: #D4A574; margin-bottom: 15px;">🌈 אישורים לריפוי</h3>
+                    <p class="affirmation-text" id="healingAffirmation">אני חזקה יותר ממה שאני מרגישה. אני בתהליך ריפוי.</p>
+                    <button class="btn btn-primary" onclick="newHealingAffirmation()">💫 אישור חדש</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools Section -->
+        <section id="tools" class="section">
+            <h2 class="section-title">🛠️ ארגז כלים</h2>
+
+            <div class="card">
+                <h3>😊 איך את מרגישה עכשיו?</h3>
+                <div class="emoji-rating">
+                    <button class="emoji-btn" onclick="selectMood(this, 1)">😢</button>
+                    <button class="emoji-btn" onclick="selectMood(this, 2)">😔</button>
+                    <button class="emoji-btn" onclick="selectMood(this, 3)">😐</button>
+                    <button class="emoji-btn" onclick="selectMood(this, 4)">🙂</button>
+                    <button class="emoji-btn" onclick="selectMood(this, 5)">😊</button>
+                </div>
+                <p id="moodFeedback" style="text-align: center; color: #888;"></p>
+            </div>
+
+            <div class="card">
+                <h3>🆘 כלי חירום לרגעי משבר</h3>
+                <div class="action-buttons">
+                    <button class="btn btn-primary" onclick="emergencyBreathing()">🌬️ נשימה מהירה</button>
+                    <button class="btn btn-secondary" onclick="emergencyAffirmation()">💝 אישור מיידי</button>
+                    <button class="btn btn-gold" onclick="emergencyGrounding()">🌍 הארקה</button>
+                </div>
+                <div id="emergencyContent" style="margin-top: 15px;"></div>
+            </div>
+
+            <div class="card">
+                <h3>📞 קווים חמים בישראל</h3>
+                <ul>
+                    <li><strong>ער"ן - עזרה ראשונה נפשית:</strong> 1201</li>
+                    <li><strong>עמותת תודעה:</strong> *2617</li>
+                    <li><strong>קו החירום לנשים:</strong> 118</li>
+                    <li><strong>נט"ל - קו תמיכה רגשית:</strong> 1-800-363-363</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>📝 טיפים יומיים</h3>
+                <div id="dailyTip" class="quote-card" style="border: none;">
+                    <p class="quote-text">לחצי לקבלת טיפ יומי</p>
+                </div>
+                <button class="btn btn-secondary" onclick="newTip()">💡 טיפ חדש</button>
+            </div>
+        </section>
+
+        <!-- Progress Section -->
+        <section id="progress" class="section">
+            <h2 class="section-title">📊 ההתקדמות שלי</h2>
+
+            <div class="card">
+                <h3>📅 מעקב יומי</h3>
+                <div class="daily-tracker" id="dailyTracker"></div>
+                <p style="text-align: center; color: #888; font-size: 0.9em;">לחצי על יום כדי לסמן שהשלמת תרגילים</p>
+            </div>
+
+            <div class="card">
+                <h3>📈 ההתקדמות הכללית</h3>
+                <p>תרגילים שהושלמו השבוע:</p>
+                <div class="progress-container">
+                    <div class="progress-bar" id="weeklyProgress" style="width: 0%;">0%</div>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" id="streakDays">0</div>
+                    <div class="stat-label">ימים רצופים</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="totalExercises">0</div>
+                    <div class="stat-label">תרגילים בסה"כ</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>📓 היסטוריית מצב רוח</h3>
+                <div id="moodHistory" class="saved-entries"></div>
+            </div>
+
+            <div class="action-buttons" style="justify-content: center; margin-top: 20px;">
+                <button class="btn btn-reset" onclick="resetAllData()">🔄 איפוס נתונים</button>
+            </div>
+        </section>
+
+        <footer>
+            <p>💕 שחרור ואהבה עצמית 💕</p>
+            <p>את ראויה לאושר ולקשרים בריאים</p>
+        </footer>
+    </div>
+
+    <script>
+        // Reset function at the START of script
+        function resetAllData() {
+            if (confirm('האם את בטוחה שברצונך לאפס את כל הנתונים? פעולה זו לא ניתנת לביטול.')) {
+                localStorage.removeItem('healingAppData');
+                alert('הנתונים אופסו בהצלחה');
+                location.reload();
+            }
+        }
+
+        // Data storage
+        let appData = {
+            daysActive: 0,
+            affirmationsRead: 0,
+            exercisesCompleted: 0,
+            journalEntries: 0,
+            streakDays: 0,
+            totalExercises: 0,
+            lastVisit: null,
+            completedDays: [],
+            moodHistory: [],
+            successEntries: [],
+            healingEntries: [],
+            customAffirmations: [],
+            triggers: [],
+            whyLeaving: '',
+            mirrorEntries: []
+        };
+
+        // Affirmations arrays
+        const generalAffirmations = [
+            "אני שלמה גם לבד. אני בוחרת קשרים שמעצימים אותי.",
+            "אני ראויה לאהבה ולכבוד - בדיוק כמו שאני.",
+            "הערך שלי לא תלוי בדעת אחרים עליי.",
+            "אני מספיקה. אני תמיד הייתי מספיקה.",
+            "אני בוחרת לשחרר את מה שלא משרת אותי.",
+            "אני חזקה, גמישה ומסוגלת לעבור כל דבר.",
+            "אני ראויה לקשרים בריאים ותומכים.",
+            "אני אוהבת ומקבלת את עצמי ללא תנאי.",
+            "הצרכים שלי חשובים ותקפים.",
+            "אני בוחרת שלום פנימי על פני דרמה.",
+            "אני סומכת על עצמי לקבל החלטות נכונות.",
+            "אני משחררת פחדים ישנים ופותחת לב לחוויות חדשות."
+        ];
+
+        const anxietyAffirmations = [
+            "אני בטוחה. אני אהובה. אני שלמה גם לבד.",
+            "הפחד הזה יעבור. אני יכולה להחזיק אותו.",
+            "אנשים שאוהבים אותי לא עוזבים בקלות.",
+            "אני לא צריכה לשלוט כדי להרגיש בטוחה.",
+            "אני יכולה לסבול אי-ודאות.",
+            "החרדה הזו לא מציאות - היא רק תחושה.",
+            "אני בוחרת לסמוך על עצמי ועל אחרים.",
+            "אני ראויה לאהבה יציבה ובטוחה.",
+            "אני לומדת להרגיע את עצמי.",
+            "אני יכולה להיות לבד ולהרגיש שלמה."
+        ];
+
+        const esteemAffirmations = [
+            "אני ראויה לאהבה ולכבוד - בדיוק כמו שאני.",
+            "הערך שלי לא נמדד בהישגים או באישור של אחרים.",
+            "אני מספיקה בדיוק כמו שאני.",
+            "אני מאמינה בכוחות שלי.",
+            "אני ראויה לדברים טובים.",
+            "הקול הפנימי שלי חשוב.",
+            "אני גאה במסע שלי.",
+            "אני בוחרת לראות את הטוב בעצמי.",
+            "אני לומדת לאהוב את עצמי יותר כל יום.",
+            "אני נותנת לעצמי חסד וסבלנות."
+        ];
+
+        const healingAffirmations = [
+            "אני חזקה יותר ממה שאני מרגישה. אני בתהליך ריפוי.",
+            "כל יום שעובר, אני מתרפאת עוד קצת.",
+            "הכאב הזה זמני. הריפוי מתמיד.",
+            "אני ראויה לעתיד טוב יותר.",
+            "הבחירה לעזוב הייתה אקט של אהבה עצמית.",
+            "אני גאה בעצמי על האומץ שלי.",
+            "אני משחררת את העבר ופותחת דף חדש.",
+            "יש לי כוח להתחיל מחדש.",
+            "הלב שלי מתרפא בקצב שלו.",
+            "אני בוחרת את עצמי, שוב ושוב."
+        ];
+
+        const dailyTips = [
+            "הקדישי 5 דקות היום רק לעצמך - בלי טלפון, בלי הסחות.",
+            "שתי מים. גם הרגשות צריכים הידרציה.",
+            "צאי להליכה קצרה. תנועה משחררת רגשות תקועים.",
+            "כתבי 3 דברים שאת מודה עליהם היום.",
+            "התקשרי לחברה טובה. חיבור אנושי מרפא.",
+            "אכלי משהו מזין. הגוף והנפש מחוברים.",
+            "לכי לישון מוקדם הלילה. מנוחה היא חלק מהריפוי.",
+            "אמרי 'לא' למשהו שלא באמת רצית לעשות.",
+            "עשי משהו יצירתי - צביעה, כתיבה, בישול.",
+            "חבקי את עצמך. זו לא קלישאה, זה באמת עוזר."
+        ];
+
+        const quotes = [
+            {text: "את ראויה לאהבה - קודם כל מעצמך", author: "תזכורת יומית"},
+            {text: "השחרור הכי גדול הוא לשחרר את הצורך להיות מושלמת", author: "ברנה בראון"},
+            {text: "את לא חייבת להצית את עצמך כדי לחמם אחרים", author: "אנונימי"},
+            {text: "האדם החשוב ביותר לרצות הוא את עצמך", author: "אוסקר ויילד"},
+            {text: "לפעמים הדבר האמיץ ביותר הוא לעזוב", author: "אנונימי"},
+            {text: "את לא צריכה להיות פחות כדי שאחרים ירגישו יותר", author: "אנונימי"}
+        ];
+
+        // Initialize app
+        function initApp() {
+            loadData();
+            updateStats();
+            generateDailyTracker();
+            checkDailyVisit();
+            loadSavedEntries();
+            setRandomQuote();
+        }
+
+        function loadData() {
+            const saved = localStorage.getItem('healingAppData');
+            if (saved) {
+                appData = {...appData, ...JSON.parse(saved)};
+            }
+        }
+
+        function saveData() {
+            localStorage.setItem('healingAppData', JSON.stringify(appData));
+        }
+
+        function checkDailyVisit() {
+            const today = new Date().toDateString();
+            if (appData.lastVisit !== today) {
+                if (appData.lastVisit) {
+                    const lastDate = new Date(appData.lastVisit);
+                    const todayDate = new Date(today);
+                    const diffDays = Math.floor((todayDate - lastDate) / (1000 * 60 * 60 * 24));
+                    if (diffDays === 1) {
+                        appData.streakDays++;
+                    } else if (diffDays > 1) {
+                        appData.streakDays = 1;
+                    }
+                } else {
+                    appData.streakDays = 1;
+                }
+                appData.daysActive++;
+                appData.lastVisit = today;
+                saveData();
+            }
+        }
+
+        function updateStats() {
+            document.getElementById('daysActive').textContent = appData.daysActive;
+            document.getElementById('affirmationsRead').textContent = appData.affirmationsRead;
+            document.getElementById('exercisesCompleted').textContent = appData.exercisesCompleted;
+            document.getElementById('journalEntries').textContent = appData.journalEntries;
+            document.getElementById('streakDays').textContent = appData.streakDays;
+            document.getElementById('totalExercises').textContent = appData.totalExercises;
+            
+            const weeklyGoal = 21;
+            const progress = Math.min((appData.exercisesCompleted / weeklyGoal) * 100, 100);
+            const progressBar = document.getElementById('weeklyProgress');
+            progressBar.style.width = progress + '%';
+            progressBar.textContent = Math.round(progress) + '%';
+        }
+
+        // Navigation
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        function showInnerTab(section, tabId) {
+            const sectionEl = document.getElementById(section);
+            sectionEl.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+            sectionEl.querySelectorAll('.inner-tab').forEach(t => t.classList.remove('active'));
+            document.getElementById(section + '-' + tabId).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        // Affirmations
+        function getRandomAffirmation(array) {
+            return array[Math.floor(Math.random() * array.length)];
+        }
+
+        function newAffirmation() {
+            document.getElementById('homeAffirmation').textContent = getRandomAffirmation(generalAffirmations);
+            appData.affirmationsRead++;
+            saveData();
+            updateStats();
+        }
+
+        function newAnxietyAffirmation() {
+            document.getElementById('anxietyAffirmation').textContent = getRandomAffirmation(anxietyAffirmations);
+            appData.affirmationsRead++;
+            saveData();
+            updateStats();
+        }
+
+        function newEsteemAffirmation() {
+            document.getElementById('esteemAffirmation').textContent = getRandomAffirmation(esteemAffirmations);
+            appData.affirmationsRead++;
+            saveData();
+            updateStats();
+        }
+
+        function newHealingAffirmation() {
+            document.getElementById('healingAffirmation').textContent = getRandomAffirmation(healingAffirmations);
+            appData.affirmationsRead++;
+            saveData();
+            updateStats();
+        }
+
+        function speakAffirmation() {
+            const text = document.getElementById('esteemAffirmation').textContent;
+            if ('speechSynthesis' in window) {
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'he-IL';
+                speechSynthesis.speak(utterance);
+            }
+        }
+
+        function setRandomQuote() {
+            const quote = quotes[Math.floor(Math.random() * quotes.length)];
+            document.getElementById('dailyQuote').textContent = quote.text;
+        }
+
+        // Tasks and exercises
+        function toggleTask(element) {
+            const checkbox = element.querySelector('input[type="checkbox"]');
+            checkbox.checked = !checkbox.checked;
+            element.classList.toggle('checked', checkbox.checked);
+        }
+
+        function completeExercise(type) {
+            appData.exercisesCompleted++;
+            appData.totalExercises++;
+            saveData();
+            updateStats();
+            alert('כל הכבוד! סיימת את התרגיל 💪');
+        }
+
+        function completeMirrorWork() {
+            completeExercise('mirror');
+        }
+
+        // Triggers
+        function toggleWarning(element) {
+            element.classList.toggle('detected');
+        }
+
+        function saveTrigger() {
+            const text = document.getElementById('triggerJournal').value.trim();
+            if (text) {
+                appData.triggers.push({
+                    date: new Date().toLocaleDateString('he-IL'),
+                    content: text
+                });
+                appData.journalEntries++;
+                saveData();
+                updateStats();
+                document.getElementById('triggerJournal').value = '';
+                alert('הטריגר נשמר 💾');
+            }
+        }
+
+        // Breathing exercise
+        let breathingInterval;
+        function startBreathing() {
+            const circle = document.getElementById('breathingCircle');
+            circle.classList.add('breathing');
+            let phase = 0;
+            const phases = ['שאפי...', 'החזיקי...', 'נשפי...', 'המתיני...'];
+            circle.textContent = phases[0];
+            
+            breathingInterval = setInterval(() => {
+                phase = (phase + 1) % 4;
+                circle.textContent = phases[phase];
+            }, 2000);
+        }
+
+        function stopBreathing() {
+            const circle = document.getElementById('breathingCircle');
+            circle.classList.remove('breathing');
+            clearInterval(breathingInterval);
+            circle.textContent = 'לחצי להתחלה';
+            completeExercise('breathing');
+        }
+
+        // Relationship assessment
+        function updateScale(input) {
+            input.nextElementSibling.textContent = input.value;
+        }
+
+        function assessRelationship() {
+            const scales = document.querySelectorAll('#relationships-assess .relationship-scale input');
+            let total = 0;
+            scales.forEach(s => total += parseInt(s.value));
+            const average = total / scales.length;
+            
+            const resultDiv = document.getElementById('assessmentResult');
+            let resultClass, resultText;
+            
+            if (average >= 7) {
+                resultClass = 'result-healthy';
+                resultText = '💚 הקשר נראה בריא ומאוזן. המשיכי לטפח אותו!';
+            } else if (average >= 4) {
+                resultClass = 'result-warning';
+                resultText = '⚠️ יש מקום לשיפור. כדאי לשוחח עם בן/בת הזוג או לשקול ייעוץ זוגי.';
+            } else {
+                resultClass = 'result-unhealthy';
+                resultText = '🚩 יש סימנים מדאיגים. שקלי פנייה לייעוץ מקצועי או חשיבה מחדש על הקשר.';
+            }
+            
+            resultDiv.innerHTML = `<div class="result-box ${resultClass}"><p>${resultText}</p><p>ממוצע: ${average.toFixed(1)}/10</p></div>`;
+        }
+
+        function analyzeRedFlags() {
+            const detected = document.querySelectorAll('#redFlagsList .warning-item.detected').length;
+            const resultDiv = document.getElementById('redFlagsResult');
+            let resultClass, resultText;
+            
+            if (detected === 0) {
+                resultClass = 'result-healthy';
+                resultText = '💚 לא זיהית דגלים אדומים. זה סימן טוב!';
+            } else if (detected <= 2) {
+                resultClass = 'result-warning';
+                resultText = `⚠️ זיהית ${detected} דגלים אדומים. כדאי לשים לב ולעקוב.`;
+            } else {
+                resultClass = 'result-unhealthy';
+                resultText = `🚩 זיהית ${detected} דגלים אדומים. זה מדאיג ושווה לשקול את המשך הקשר.`;
+            }
+            
+            resultDiv.innerHTML = `<div class="result-box ${resultClass}"><p>${resultText}</p></div>`;
+        }
+
+        // Mood tracking
+        function selectMood(btn, level) {
+            document.querySelectorAll('.emoji-btn').forEach(b => b.classList.remove('selected'));
+            btn.classList.add('selected');
+            
+            const feedback = ['את עוברת זמן קשה. זה בסדר. 💗', 'יום מאתגר. את עושה טוב שהגעת לכאן.', 'יום ממוצע. כל יום הוא הזדמנות חדשה.', 'יופי! ממשיכים קדימה 🌟', 'נהדר! שמחה לשמוע! 🎉'];
+            document.getElementById('moodFeedback').textContent = feedback[level - 1];
+            
+            appData.moodHistory.push({
+                date: new Date().toLocaleString('he-IL'),
+                level: level
+            });
+            saveData();
+            loadMoodHistory();
+        }
+
+        function loadMoodHistory() {
+            const container = document.getElementById('moodHistory');
+            const emojis = ['😢', '😔', '😐', '🙂', '😊'];
+            container.innerHTML = appData.moodHistory.slice(-10).reverse().map(m => 
+                `<div class="entry-item"><span class="entry-date">${m.date}</span> ${emojis[m.level - 1]}</div>`
+            ).join('');
+        }
+
+        // Emergency tools
+        function emergencyBreathing() {
+            document.getElementById('emergencyContent').innerHTML = `
+                <div class="card" style="background: #E8F8F5; border: 2px solid #98D8C8;">
+                    <h4>🌬️ נשימה מהירה 4-7-8</h4>
+                    <p>1. שאפי דרך האף ל-4 שניות</p>
+                    <p>2. החזיקי ל-7 שניות</p>
+                    <p>3. נשפי דרך הפה ל-8 שניות</p>
+                    <p>4. חזרי 4 פעמים</p>
+                </div>
+            `;
+        }
+
+        function emergencyAffirmation() {
+            document.getElementById('emergencyContent').innerHTML = `
+                <div class="affirmation-box">
+                    <p class="affirmation-text">את בטוחה. את חזקה. הרגע הזה יעבור.</p>
+                </div>
+            `;
+        }
+
+        function emergencyGrounding() {
+            document.getElementById('emergencyContent').innerHTML = `
+                <div class="card" style="background: #FFF5F8; border: 2px solid #FFB6C1;">
+                    <h4>🌍 הארקה מהירה</h4>
+                    <p>🖐️ שמי את כפות הרגליים על הרצפה</p>
+                    <p>👀 מצאי 5 דברים שאת רואה</p>
+                    <p>👂 מצאי 4 קולות שאת שומעת</p>
+                    <p>✋ געי ב-3 דברים</p>
+                    <p>👃 זהי 2 ריחות</p>
+                    <p>👅 טעמי דבר 1</p>
+                </div>
+            `;
+        }
+
+        // Tips
+        function newTip() {
+            const tip = dailyTips[Math.floor(Math.random() * dailyTips.length)];
+            document.getElementById('dailyTip').innerHTML = `<p class="quote-text">${tip}</p>`;
+        }
+
+        // Save functions
+        function saveSuccess() {
+            const text = document.getElementById('successEntry').value.trim();
+            if (text) {
+                appData.successEntries.push({
+                    date: new Date().toLocaleDateString('he-IL'),
+                    content: text
+                });
+                appData.journalEntries++;
+                saveData();
+                updateStats();
+                document.getElementById('successEntry').value = '';
+                loadSuccessEntries();
+                alert('ההצלחה נשמרה! 🎉');
+            }
+        }
+
+        function loadSuccessEntries() {
+            const container = document.getElementById('successList');
+            container.innerHTML = appData.successEntries.slice(-10).reverse().map(e => 
+                `<div class="entry-item"><span class="entry-date">${e.date}</span><p class="entry-content">${e.content}</p></div>`
+            ).join('');
+        }
+
+        function saveHealingEntry() {
+            const text = document.getElementById('healingJournal').value.trim();
+            if (text) {
+                appData.healingEntries.push({
+                    date: new Date().toLocaleDateString('he-IL'),
+                    content: text
+                });
+                appData.journalEntries++;
+                saveData();
+                updateStats();
+                document.getElementById('healingJournal').value = '';
+                loadHealingEntries();
+                alert('נשמר! 💗');
+            }
+        }
+
+        function loadHealingEntries() {
+            const container = document.getElementById('healingEntries');
+            container.innerHTML = appData.healingEntries.slice(-10).reverse().map(e => 
+                `<div class="entry-item"><span class="entry-date">${e.date}</span><p class="entry-content">${e.content}</p></div>`
+            ).join('');
+        }
+
+        function saveCustomAffirmation() {
+            const text = document.getElementById('customAffirmation').value.trim();
+            if (text) {
+                appData.customAffirmations.push(text);
+                generalAffirmations.push(text);
+                saveData();
+                document.getElementById('customAffirmation').value = '';
+                loadCustomAffirmations();
+                alert('האישור נוסף! ✨');
+            }
+        }
+
+        function loadCustomAffirmations() {
+            const container = document.getElementById('myAffirmations');
+            container.innerHTML = appData.customAffirmations.map(a => 
+                `<div class="entry-item"><p class="entry-content">"${a}"</p></div>`
+            ).join('');
+        }
+
+        function saveWhyLeaving() {
+            const text = document.getElementById('whyLeavingLetter').value.trim();
+            if (text) {
+                appData.whyLeaving = text;
+                appData.journalEntries++;
+                saveData();
+                updateStats();
+                alert('המכתב נשמר. תוכלי לחזור אליו בכל עת. 💪');
+            }
+        }
+
+        function saveInnerChildLetter() {
+            const text = document.getElementById('innerChildLetter').value.trim();
+            if (text) {
+                appData.journalEntries++;
+                saveData();
+                updateStats();
+                alert('המכתב לילדה הפנימית נשמר 💗');
+            }
+        }
+
+        function saveThoughtChallenge() {
+            appData.exercisesCompleted++;
+            appData.journalEntries++;
+            saveData();
+            updateStats();
+            alert('אתגור המחשבות נשמר! עבודה מצוינת 🌟');
+        }
+
+        function saveMirrorEntry() {
+            const text = document.getElementById('mirrorJournal').value.trim();
+            if (text) {
+                appData.mirrorEntries.push({
+                    date: new Date().toLocaleDateString('he-IL'),
+                    content: text
+                });
+                appData.journalEntries++;
+                saveData();
+                updateStats();
+                document.getElementById('mirrorJournal').value = '';
+                alert('נשמר! 🪞');
+            }
+        }
+
+        function toggleStrength(element) {
+            const checkbox = element.querySelector('input[type="checkbox"]');
+            checkbox.checked = !checkbox.checked;
+            element.classList.toggle('checked', checkbox.checked);
+        }
+
+        function addStrength() {
+            const text = document.getElementById('customStrength').value.trim();
+            if (text) {
+                const list = document.getElementById('strengthsList');
+                const newItem = document.createElement('div');
+                newItem.className = 'checklist-item checked';
+                newItem.onclick = function() { toggleStrength(this); };
+                newItem.innerHTML = `<input type="checkbox" checked><span>${text}</span>`;
+                list.appendChild(newItem);
+                document.getElementById('customStrength').value = '';
+            }
+        }
+
+        // Daily tracker
+        function generateDailyTracker() {
+            const container = document.getElementById('dailyTracker');
+            const today = new Date();
+            const days = ['א', 'ב', 'ג', 'ד', 'ה', 'ו', 'ש'];
+            
+            for (let i = 6; i >= 0; i--) {
+                const date = new Date(today);
+                date.setDate(date.getDate() - i);
+                const dateStr = date.toDateString();
+                const isToday = i === 0;
+                const isCompleted = appData.completedDays.includes(dateStr);
+                
+                const cell = document.createElement('div');
+                cell.className = 'day-cell' + (isCompleted ? ' completed' : '') + (isToday ? ' today' : '');
+                cell.innerHTML = `<span>${days[date.getDay()]}</span><span>${date.getDate()}</span>`;
+                cell.onclick = () => toggleDayCompletion(dateStr, cell);
+                container.appendChild(cell);
+            }
+        }
+
+        function toggleDayCompletion(dateStr, cell) {
+            const index = appData.completedDays.indexOf(dateStr);
+            if (index > -1) {
+                appData.completedDays.splice(index, 1);
+                cell.classList.remove('completed');
+            } else {
+                appData.completedDays.push(dateStr);
+                cell.classList.add('completed');
+            }
+            saveData();
+        }
+
+        function loadSavedEntries() {
+            loadSuccessEntries();
+            loadHealingEntries();
+            loadCustomAffirmations();
+            loadMoodHistory();
+            if (appData.whyLeaving) {
+                document.getElementById('whyLeavingLetter').value = appData.whyLeaving;
+            }
+        }
+
+        // Initialize on load
+        document.addEventListener('DOMContentLoaded', initApp);
+    </script>
+</body>
+</html>
